@@ -53,7 +53,7 @@ class SiriProxy::Plugin::Lotto < SiriProxy::Plugin
     
 # german Looto numbers 4au49
     
-listen_for /(Penis)/i do
+listen_for /Penis/i do
     say "du hast den allerdicksten!"
    
 end
