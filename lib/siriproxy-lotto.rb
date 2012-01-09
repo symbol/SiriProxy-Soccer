@@ -53,19 +53,9 @@ class SiriProxy::Plugin::Lotto < SiriProxy::Plugin
     
 # german Looto numbers 4au49
     
-listen_for /(Lotto|Lottozahlen|Ziehung|Lottoziehung|Lauter|Sechs aus 49|Sex aus 49).*(Deutschland)/i do
-    
-    shaf = ""
-    begin
-    doc = Nokogiri::XML(eat("http://rss.auto-scripting.com/rss_lotto_6aus49.php?count=1"))
-    rescue Timeout::Error
-    print "Timeout-Error beim Lesen der Seite"
-    shaf ="timeout"
-    next
-    rescue
-    print "Lesefehler !"
-    shaf ="timeout"
-    next
+listen_for /(Penis)/i do
+    say "du hast den allerdicksten!"
+   
 end
 
 if shaf =="timeout" 
